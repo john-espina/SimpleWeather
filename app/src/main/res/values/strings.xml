@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">Simple Weather NZ</string>
+
+    <string-array name="city_array">
+        <item>KAITAIA</item>
+        <item>KERIKERI</item>
+        <item>WHANGAREI</item>
+        <item>DARGAVILLE</item>
+        <item>AUCKLAND</item>
+        <item>THAMES</item>
+        <item>HAMILTON</item>
+        <item>TAURANGA</item>
+        <item>WHAKATANE</item>
+        <item>ROTORUA</item>
+        <item>TOKOROA</item>
+        <item>GISBORNE</item>
+        <item>TE KUITI</item>
+        <item>TAUPO</item>
+        <item>TAUMARUNUI</item>
+        <item>NAPIER</item>
+        <item>HASTINGS</item>
+        <item>DANNEVIRKE</item>
+        <item>NEW PLYMOUTH</item>
+        <item>WANGANUI</item>
+        <item>PALMERSTON NORTH</item>
+        <item>LEVIN</item>
+        <item>MASTERTON</item>
+        <item>PARAPARAUMU</item>
+        <item>WELLINGTON</item>
+        <item>MOTUEKA</item>
+        <item>NELSON</item>
+        <item>BLENHEIM</item>
+        <item>WESTPORT</item>
+        <item>REEFTON</item>
+        <item>GREYMOUTH</item>
+        <item>HOKITIKA</item>
+        <item>KAIKOURA</item>
+        <item>CHRISTCHURCH</item>
+        <item>ASHBURTON</item>
+        <item>TIMARU</item>
+        <item>QUEENSTOWN</item>
+        <item>WANAKA</item>
+        <item>OAMARU</item>
+        <item>DUNEDIN</item>
+        <item>GORE</item>
+        <item>INVERCARGILL</item>
+
+    </string-array>
+
+
+</resources>
