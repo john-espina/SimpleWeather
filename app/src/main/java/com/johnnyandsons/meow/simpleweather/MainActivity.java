@@ -1,6 +1,8 @@
 package com.johnnyandsons.meow.simpleweather;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
@@ -35,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     public static  TextView details;
     public static TextView forecast;
     public static  ImageView weatherIcon;
+    int positionID;
 
 
 
@@ -50,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
         details = (TextView) findViewById(R.id.textView2);
         weatherIcon = (ImageView) findViewById(R.id.imageView);
         forecast =(TextView) findViewById(R.id.textView3);
+
+        final SharedPreferences sp = getSharedPreferences("Wellington", Context.MODE_PRIVATE);
+
+        int  myIntValue = sp.getInt("tag", 0);
+
         String[] list = getResources().getStringArray(R.array.city_array);
         Arrays.sort(list);
 
@@ -60,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+        spinner.setSelection(myIntValue);
         spinner.setOnItemSelectedListener(
                 new AdapterView.OnItemSelectedListener() {
 
@@ -67,6 +76,9 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         city = spinner.getSelectedItem().toString();
+                        positionID =  spinner.getSelectedItemPosition();
+                        SharedPreferences.Editor editor = sp.edit();
+                        editor.putInt ("tag", positionID).apply();
                         new UpdateWeather().execute();
 
                     }
